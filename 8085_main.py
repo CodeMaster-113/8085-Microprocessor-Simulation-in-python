@@ -8,6 +8,7 @@ termination_opcodes = ["76", "C7", "CF", "D7", "DF", "E7", "EF", "F7", "FF"]
 
 pc = 0x0000
 
+print("Enter instructions line by line in uppercase: ")
 while True:
     s = input(f"{hex(pc).upper()[2:].zfill(4)}: ").strip()
     arr = get_opcode(s)
