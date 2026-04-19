@@ -22,6 +22,24 @@ Requirements:    Python 3.6 or higher
                  No external libraries required
 
 
+
+Project Structure:
+
+├── 8085_main.py       # Entry point — assembly input loop, data entry, output check
+|
+├── opcodes.py         # Mnemonic → opcode + byte-length lookup (get_opcode)
+|
+├── flags.py           # Flag helpers — calc_parity, update_flags, pack/unpack flags
+|
+├── instructions.py    # All exec_* instruction functions (MOV, ADD, JMP, CALL, etc.)
+|
+├── execution.py       # Main execution engine — fetch-decode-execute loop
+|
+└── memory.py          # Global state — registers{}, flags{}, memory[] (64KB)
+
+
+
+
 How to Run
 bash      python 8085_simulator.py
 
